@@ -100,6 +100,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 	</div>
 	<tw-storydata name="Death and Taxes Rip Off" startnode="5" creator="Twine" creator-version="2.6.2" format="SugarCube" format-version="2.36.1" ifid="D79C5A94-8253-475F-BCB5-5AE0D41FCDE4" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.link-internal {
   color: black;
+  text-decoration: none;
 }
 
 .link-internal:hover {
@@ -110,6 +111,10 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 
 #choice_1, #choice_2 {
   text-align: left;
+}
+
+.badge {
+  font-size: 0.25em;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">UIBar.destroy();
 importStyles(
 "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css",
@@ -202,7 +207,7 @@ importScripts("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bu
 
 &lt;p class=&quot;card-content&quot;&gt;As a PCM, you are tasked with making choices to control the population. You will go into the lives of different beings in your universe and influence them with population control methods following protocol. As you can see, the world assigned to you is currently overpopulated (highlight  population bar/tracker), and we do not have enough resources to sufficiently support everyone. Your choices will impact the world’s population, but at the same time, also have an effect on the happiness of the people (highlight happiness bar/tracker). Your task as PCM, is to control the population while keeping the people’s happiness in mind. Take note that you have strictly only two choices.&lt;/p&gt;
 
-&lt;a data-passage=&quot;Tutorial 1&quot; class=&quot;btn btn-info&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;&lt;strong&gt;Continue&lt;/strong&gt;&lt;/a&gt;
+&lt;a data-passage=&quot;Tutorial 1&quot; class=&quot;btn btn-info rounded-pill&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;&lt;strong&gt;Continue&lt;/strong&gt;&lt;/a&gt;
 &lt;div class=&quot;d-none&quot;&gt;[[Tutorial 1]]&lt;/div&gt;
 
 &lt;/div&gt;
@@ -213,39 +218,50 @@ importScripts("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bu
 &lt;div class=&quot;shadow-lg card mb-5&quot;&gt;
     &lt;div class=&quot;card-body&quot;&gt;
     	/* REPLACE HERE WITH PHOTO*/
-        &lt;img src=&quot;https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80&quot; class=&quot;card-img-top&quot; alt=&quot;...&quot;&gt;
-        /* REPLACE HERE CASE NUMBER OR TITLE OF SITUATION IF MERON*/
-        &lt;p class=&quot;h1 mt-1 card-title&quot;&gt;Case #1&lt;/p&gt;
+        &lt;img src=&quot;https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80&quot; class=&quot;card-img-top mb-3&quot; alt=&quot;...&quot;&gt;
+        &lt;div class=&quot;mb-3&quot;&gt;
+            /* REPLACE HERE CASE NUMBER OR TITLE OF SITUATION IF MERON*/
+            &lt;p class=&quot;h1 card-title d-inline&quot;&gt;Case #1
+            &lt;/p&gt;
+                &lt;span id=&quot;new_1&quot; class=&quot;d-inline badge rounded-pill bg-danger&quot;&gt;New&lt;/span&gt;
+                &lt;span id=&quot;read_1&quot; class=&quot;d-none d-inline badge rounded-pill bg-secondary&quot;&gt;Read&lt;/span&gt;
+        &lt;/div&gt;
 		/* REPLACE HERE WITH SITUATION */
-        &lt;p class=&quot;card-content&quot;&gt;For your first case, you enter the life of a dog breeder. Due to unforeseen circumstances, you lost track of your dogs’ date of expected delivery and all of them gave birth around the same time, causing a huge spike of puppies.  Everyone around you already has a dog and has no more interest in adopting more puppies.  You only have enough resources to healthily raise  about half of them, but trying to divide what resources you have for these puppies would also mean they might grow malnourished. What will you do?&lt;/p&gt;
+        &lt;p class=&quot;card-content&quot;&gt;For your first case, you enter the life of a dog breeder. Due to unforeseen circumstances, you lost track of your dogs’ date of expected delivery and all of them gave birth around the same time, causing a huge spike of puppies.  Everyone around you already has a dog and has no more interest in adopting more puppies.  You only have enough resources to healthily raise  about half of them, but trying to divide what resources you have for these puppies would also mean they might grow malnourished. &lt;/p&gt;
+        &lt;p class=&quot;card-content&quot;&gt;&lt;strong&gt;What will you do?&lt;/strong&gt;&lt;/p&gt;
 
 
        &lt;strong&gt;&lt;div id=&quot;choices&quot;&gt;
-            &lt;div class=&quot;btn btn-warning mb-3&quot; id=&quot;choice_1&quot;&gt;
+            &lt;div class=&quot;btn btn-warning mb-3 rounded-pill&quot; id=&quot;choice_1&quot;&gt;
             	/* REPLACE HERE CHOICE 1 */
                 &lt;&lt;linkreplace &quot;Euthanize half the puppies and raise the other half.&quot;&gt;&gt;
                 	 /* REPLACE HERE ALERT TYPE WITH APPROPRIATE ALERT TYPE*/
                     &lt;&lt;addclass &quot;#choices&quot; &quot;alert alert-danger&quot;&gt;&gt;
                     &lt;&lt;addclass &quot;#choice_2&quot; &quot;d-none&quot;&gt;&gt;
-                    &lt;&lt;set $scene1 = true&gt;&gt;
+                    &lt;&lt;addclass &quot;#new_1&quot; &quot;d-none&quot;&gt;&gt;
+                    &lt;&lt;removeclass &quot;#read_1&quot; &quot;d-none&quot;&gt;&gt;
+                    &lt;&lt;set $scene1 = 1&gt;&gt;/*REPLACE WITH SCENE #*/
                     &lt;&lt;removeclass &quot;#aftermath&quot; &quot;d-none&quot;&gt;&gt;
                     &lt;&lt;removeclass &quot;#aftermath_1&quot; &quot;d-none&quot;&gt;&gt;
-                    &lt;&lt;removeclass &quot;#choice_1&quot; &quot;btn btn-warning&quot;&gt;&gt;
+                    &lt;&lt;removeclass &quot;#choice_1&quot; &quot;btn btn-warning mb-3&quot;&gt;&gt;
                     /* REPLACE HERE CHOICE 1 */
                     Euthanize half the puppies and raise the other half.
                 &lt;&lt;/linkreplace&gt;&gt;
             &lt;/div&gt;
-            &lt;div class=&quot;btn btn-warning&quot; id=&quot;choice_2&quot;&gt;
+            &lt;div class=&quot;btn btn-warning rounded-pill&quot; id=&quot;choice_2&quot;&gt;
             	/* REPLACE HERE CHOICE 2 */
                  &lt;&lt;linkreplace &quot;Try to find more resources to raise all of them, dividing what you have in the meantime.&quot;&gt;&gt;
                  /* REPLACE HERE ALERT TYPE WITH APPROPRIATE ALERT TYPE*/
                     &lt;&lt;addclass &quot;#choices&quot; &quot;alert alert-success&quot;&gt;&gt;
                     &lt;&lt;addclass &quot;#choice_1&quot; &quot;d-none&quot;&gt;&gt;
+                    /*CHANGE WHERE APPROPRIATE*/
                     &lt;&lt;set $voluntarist +=1&gt;&gt;
-                    &lt;&lt;set $scene1 = false&gt;&gt;
+                    &lt;&lt;set $scene1 = 2&gt;&gt;/*REPLACE WITH SCENE #*/
                      &lt;&lt;removeclass &quot;#aftermath&quot; &quot;d-none&quot;&gt;&gt;
                      &lt;&lt;removeclass &quot;#aftermath_2&quot; &quot;d-none&quot;&gt;&gt;
                      &lt;&lt;removeclass &quot;#choice_2&quot; &quot;btn btn-warning&quot;&gt;&gt;
+                     &lt;&lt;addclass &quot;#new_1&quot; &quot;d-none&quot;&gt;&gt;
+                    &lt;&lt;removeclass &quot;#read_1&quot; &quot;d-none&quot;&gt;&gt;
                      /* REPLACE HERE CHOICE 2 */
                     Try to find more resources to raise all of them, dividing what you have in the meantime.
                 &lt;&lt;/linkreplace&gt;&gt;
@@ -257,13 +273,14 @@ importScripts("https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bu
 
 &lt;div id=&quot;aftermath&quot; class=&quot;d-none shadow-lg card mb-5&quot;&gt;
 	&lt;div class=&quot;card-body&quot;&gt;
-    	&lt;p class=&quot;h1&quot;&gt;The Aftermath...&lt;/p&gt;
+    	&lt;p class=&quot;h1 d-inline&quot;&gt;The Aftermath...&lt;/p&gt;
+        &lt;span class=&quot;d-inline badge rounded-pill bg-danger&quot;&gt;New&lt;/span&gt;
         /* REPLACE HERE AFTERMATH OF CHOICE 1 */
     	&lt;p id=&quot;aftermath_1&quot; class=&quot;card-content d-none&quot;&gt;As you chose to euthanize half the puppies, you were able to fully support the other half. However, people in your neighborhood learn about your actions and you are now known as someone heartless, capable of killing cute and defenseless puppies.&lt;/p&gt;
         /* REPLACE HERE AFTERMATH OF CHOICE 2 */
         &lt;p id=&quot;aftermath_2&quot; class=&quot;card-content d-none&quot;&gt;As you chose to raise all of them, they grow happily, albeit a little skinny. However, once people in your neighborhood learn of your situation, they all pitch in to donate enough resources for you to raise all of the puppies fully.&lt;/p&gt;
         /* REPLACE HERE TO NEXT SCENE */
-        &lt;a data-passage=&quot;Scene 2&quot; class=&quot;btn btn-info&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;&lt;strong&gt;Continue&lt;/strong&gt;&lt;/a&gt;
+        &lt;a data-passage=&quot;Scene 2&quot; class=&quot;btn btn-info rounded-pill&quot; href=&quot;#&quot; role=&quot;button&quot;&gt;&lt;strong&gt;Continue&lt;/strong&gt;&lt;/a&gt;
 &lt;div class=&quot;d-none&quot;&gt;[[Scene 2]]&lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;
