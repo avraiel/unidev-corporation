@@ -98,7 +98,7 @@ var LZString={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Death and Taxes Rip Off" startnode="1" creator="Twine" creator-version="2.6.2" format="SugarCube" format-version="2.36.1" ifid="D79C5A94-8253-475F-BCB5-5AE0D41FCDE4" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.link-internal {
+	<tw-storydata name="Death and Taxes Rip Off" startnode="24" creator="Twine" creator-version="2.6.2" format="SugarCube" format-version="2.36.1" ifid="D79C5A94-8253-475F-BCB5-5AE0D41FCDE4" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.link-internal {
   color: black;
   text-decoration: none;
 }
@@ -159,7 +159,7 @@ document.body.style.zoom = "90%";
 &lt;div class=&quot;card-body&quot;&gt;
 	&lt;p class=&quot;h1 card-title&quot;&gt;Welcome to UniDev Corp.&lt;/p&gt;
     &lt;p class=&quot;card-subtitle mb-4 text-muted&quot;&gt;sent &lt;&lt;print $clean_now&gt;&gt;, 12:00PM&lt;/p&gt;
-    &lt;p class=&quot;card-text&quot;&gt;&lt;&lt;link [[Start Game|Onboarding]]&gt;&gt;&lt;&lt;audio &quot;bgm&quot; volume 0 fadeto 0.03 loop&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;br&gt;[[About the Game|About]]&lt;/p&gt;
+    &lt;p class=&quot;card-text&quot;&gt;&lt;&lt;link [[Start Game|Onboarding]]&gt;&gt;&lt;&lt;audio &quot;bgm&quot; volume 0 fadein 0.03 loop play&gt;&gt;&lt;&lt;/link&gt;&gt;&lt;br&gt;[[About the Game|About]]&lt;/p&gt;
     &lt;p class=&quot;card-content&quot;&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -557,7 +557,7 @@ document.body.style.zoom = "90%";
 &lt;&lt;done&gt;&gt;
 &lt;&lt;if $ingame&gt;&gt;
 	&lt;&lt;addclass &quot;.shadow-lg&quot; &quot;mt-6&quot;&gt;&gt;
-    &lt;&lt;audio &quot;ding&quot; fadeout&gt;&gt;
+    &lt;&lt;audio &quot;ding&quot; play&gt;&gt;
     &lt;&lt;if $gaming&gt;&gt;
     	&lt;&lt;removeclass &quot;#aftermath&quot; &quot;mt-6&quot;&gt;&gt;
     &lt;&lt;/if&gt;&gt;
@@ -1838,7 +1838,7 @@ document.body.style.zoom = "90%";
 &lt;div class=&quot;shadow-lg card mb-5&quot; &gt;
     &lt;div class=&quot;card-body&quot;&gt;
     	/* REPLACE HERE WITH PHOTO*/
-        &lt;img src=&quot;https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80&quot; class=&quot;card-img-top mb-3&quot; alt=&quot;...&quot;&gt;
+        &lt;img src=&quot;https://metro.co.uk/wp-content/uploads/2017/10/pri_57324350.jpg?quality=90&amp;strip=all&amp;zoom=1&amp;resize=540%2C357&quot; class=&quot;card-img-top mb-3&quot; alt=&quot;...&quot;&gt;
         &lt;div class=&quot;mb-3&quot;&gt;
             /* REPLACE HERE CASE NUMBER OR TITLE OF SITUATION IF MERON*/
             &lt;p class=&quot;h1 card-title d-inline&quot;&gt;Here are the ropes
